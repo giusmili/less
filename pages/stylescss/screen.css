@@ -1,0 +1,67 @@
+/*mes variables*/
+/*la mise en forme less*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+body {
+  font: 16px 'Open Sans', sans-serif;
+  font-size-adjust: 0.5;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+h1 {
+  background: #0C3D5F;
+  box-shadow: 0 2px 2px #ccc;
+  font-weight: 300;
+  /*pour le même élément*/
+  margin: 0 0 10px;
+  color: #fff;
+  line-height: 60px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 100;
+  text-align: center;
+}
+hr {
+  border: border:0;
+  height: 1px;
+  background: #ccc;
+}
+ul {
+  width: 500px;
+  margin: 10px auto;
+  line-height: 35px;
+  background: #2196F3;
+  padding: 10px;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  /*Call back de la fonction*/
+  overflow: hidden;
+  box-shadow: 0 2px 2px #ccc;
+}
+ul li {
+  list-style-type: none;
+  padding-left: 6px;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+ul li:hover {
+  background: #BFE4FF;
+  color: #222;
+}
+ul a {
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  color: #fff;
+}
+ul a:hover {
+  color: #222;
+}
+/*fonctions*/

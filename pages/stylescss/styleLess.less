@@ -1,0 +1,105 @@
+
+/*mes variables*/
+
+@texte: 16px;
+@police: 'Open Sans', sans-serif;
+@sizeadjuste: 0.5;
+@bolder: 100;
+@align: center;
+@boxListeSize: 500px;
+@box-align: 10px auto;
+@item-liste: none;
+@line-h: 35px;
+@decoration: none;
+@color-link: #fff;
+@backgorund-color: #2196F3;
+@ul-padding: 10px;
+@mask: hidden;
+@sizing: border-box;
+@header: #0C3D5F;
+@header-line-heignt: 60px;
+@shadow: 0 2px 2px #ccc;
+@hr: border:0;
+
+/*la mise en forme less*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+body{
+  font: @texte @police;
+  font-size-adjust: @sizeadjuste;
+  margin:0;
+}
+
+
+*{
+  box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+}
+h1{
+  background: @header;
+  box-shadow:@shadow;
+  font-weight:300;
+    &{                /*pour le même élément*/
+      margin:0 0 10px;
+      color: @color-link;
+      line-height: @header-line-heignt;
+	  
+    }
+	
+}
+h1,h2,h3{
+  font-weight: @bolder;
+  text-align: center;
+}
+hr{
+	border:@hr;
+	height:1px;
+	background:#ccc;
+}
+
+ul{
+
+  width: @boxListeSize;
+  margin: @box-align;
+  line-height: @line-h;
+  background: @backgorund-color;
+  padding: @ul-padding;
+ .border(8px*2);/*Call back de la fonction*/
+  overflow: @mask;
+  box-shadow:@shadow;
+  li{
+    list-style-type: @item-liste;
+    padding-left:6px;
+    .transition(0.2s);
+
+    &:hover{
+      background: #BFE4FF;
+      color:#222;
+    }
+
+    }
+      a{
+       text-decoration: @decoration;
+       display:block;
+       .transition(0.2s*2);
+       color: @color-link;
+         &:hover{
+         color:#222;
+      }
+
+    }
+   
+}
+
+/*fonctions appelée plus haut*/
+
+.border(@radius){
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.transition(@duration:0.2s){
+  transition-duration:@duration;
+  -webkit-transition-duration:@duration;
+}
